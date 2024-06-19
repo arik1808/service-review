@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Service Website</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+     <!-- Initial Login Page -->
+     <div id="loginPage" class="container text-center my-5">
+          <h1>Welcome to Service Website</h1>
+          <button class="btn btn-primary" onclick="showLoginForm()">Login</button>
+     </div>
+
+     <!-- Login Form Section -->
+     <section id="loginFormSection" class="py-5" style="display: none;">
+          <div class="container">
+               <h2 class="text-center">Login</h2>
+               <div class="row justify-content-center">
+                    <div class="col-md-6">
+                         <form id="loginForm">
+                              <div class="form-group">
+                                   <label for="username">Username</label>
+                                   <input type="text" class="form-control" id="username" required>
+                              </div>
+                              <div class="form-group">
+                                   <label for="email">Email</label>
+                                   <input type="email" class="form-control" id="email" required>
+                              </div>
+                              <div class="form-group">
+                                   <label for="password">Password</label>
+                                   <input type="password" class="form-control" id="password" required>
+                              </div>
+                              <button type="submit" class="btn btn-primary">Submit</button>
+                         </form>
+                         <div id="successMessage" class="alert alert-success mt-3" style="display: none;">
+                              Login successful!
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <!-- Main Page -->
+     <div id="mainPage" style="display: none;">
+          <!-- Navbar -->
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+               <div class="container">
+                    <a class="navbar-brand" href="#">Service Website</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                         <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                         <ul class="navbar-nav ml-auto">
+                              <li class="nav-item" id="greeting" style="display: none;"><a class="nav-link" href="#">Hi,
+                                   </a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#blogs">Blogs</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#login">Login</a></li>
+                         </ul>
+                    </div>
+               </div>
+          </nav>
+
+          <!-- Slider/Banner -->
+          <div id="banner" class="jumbotron jumbotron-fluid text-center text-white bg-primary">
+               <div class="container">
+                    <h1 class="display-4">Welcome to Our Services</h1>
+                    <p class="lead">Your satisfaction is our priority</p>
+               </div>
+          </div>
+
+          <!-- Services Section -->
+          <section id="services" class="py-5">
+               <div class="container">
+                    <h2 class="text-center">Our Services</h2>
+                    <div class="row">
+                         <!-- Service 1 -->
+                         <div class="col-md-4">
+                              <div class="card">
+                                   <img src="service1.jpg" class="card-img-top" alt="Service 1">
+                                   <div class="card-body">
+                                        <h5 class="card-title">Service 1</h5>
+                                        <button class="btn btn-primary" data-toggle="modal"
+                                             data-target="#serviceModal1">View Details</button>
+                                   </div>
+                              </div>
+                         </div>
+                         <!-- Service 2 -->
+                         <div class="col-md-4">
+                              <div class="card">
+                                   <img src="service2.jpg" class="card-img-top" alt="Service 2">
+                                   <div class="card-body">
+                                        <h5 class="card-title">Service 2</h5>
+                                        <button class="btn btn-primary" data-toggle="modal"
+                                             data-target="#serviceModal2">View Details</button>
+                                   </div>
+                              </div>
+                         </div>
+                         <!-- Service 3 -->
+                         <div class="col-md-4">
+                              <div class="card">
+                                   <img src="service3.jpg" class="card-img-top" alt="Service 3">
+                                   <div class="card-body">
+                                        <h5 class="card-title">Service 3</h5>
+                                        <button class="btn btn-primary" data-toggle="modal"
+                                             data-target="#serviceModal3">View Details</button>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="text-center mt-4">
+                         <button class="btn btn-secondary" onclick="window.location.href='services.html'">See
+                              All</button>
+                    </div>
+               </div>
+          </section>
+
+          <!-- Footer -->
+          <footer class="bg-dark text-white text-center py-3">
+               <div class="container">
+                    <p>&copy; 2024 Service Website. All rights reserved.</p>
+               </div>
+          </footer>
+
+          <!-- Modals for Services -->
+          <!-- Service 1 Modal -->
+          <div class="modal fade" id="serviceModal1" tabindex="-1" aria-labelledby="serviceModalLabel1"
+               aria-hidden="true">
+               <div class="modal-dialog">
+                    <div class="modal-content">
+                         <div class="modal-header">
+                              <h5 class="modal-title" id="serviceModalLabel1">Service 1</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                   <span aria-hidden="true">&times;</span>
+                              </button>
+                         </div>
+                         <div class="modal-body">
+                              <img src="service1.jpg" class="img-fluid" alt="Service 1">
+                              <p>Full description of Service 1.</p>
+                         </div>
+                         <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                         </div>
+                    </div>
+               </div>
+          </div>
+
+          <!-- Service 2 Modal -->
+          <div class="modal fade" id="serviceModal2" tabindex="-1" aria-labelledby="serviceModalLabel2"
+               aria-hidden="true">
+               <div class="modal-dialog">
+                    <div class="modal-content">
+                         <div class="modal-header">
+                              <h5 class="modal-title" id="serviceModalLabel2">Service 2</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                   <span aria-hidden="true">&times;</span>
+                              </button>
+                         </div>
+                         <div class="modal-body">
+                              <img src="service2.jpg" class="img-fluid" alt="Service 2">
+                              <p>Full description of Service 2.</p>
+                         </div>
+                         <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                         </div>
+                    </div>
+               </div>
+          </div>
+
+          <!-- Service 3 Modal -->
+          <div class="modal fade" id="serviceModal3" tabindex="-1" aria-labelledby="serviceModalLabel3"
+               aria-hidden="true">
+               <div class="modal-dialog">
+                    <div class="modal-content">
+                         <div class="modal-header">
+                              <h5 class="modal-title" id="serviceModalLabel3">Service 3</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                   <span aria-hidden="true">&times;</span>
+                              </button>
+                         </div>
+                         <div class="modal-body">
+                              <img src="service3.jpg" class="img-fluid" alt="Service 3">
+                              <p>Full description of Service 3.</p>
+                         </div>
+                         <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+     <script>
+          function showLoginForm() {
+               document.getElementById('loginPage').style.display = 'none';
+               document.getElementById('loginFormSection').style.display = 'block';
+          }
+
+          document.getElementById('loginForm').addEventListener('submit', function (event) {
+               event.preventDefault(); // Prevent form from submitting the traditional way
+
+               const username = document.getElementById('username').value;
+
+               document.getElementById('loginFormSection').style.display = 'none';
+               document.getElementById('mainPage').style.display = 'block';
+
+               const greeting = document.getElementById('greeting');
+               greeting.style.display = 'block';
+               greeting.querySelector('a').textContent = 'Hi, ' + username;
+          });
+     </script>
+</body>
+
+</html>
